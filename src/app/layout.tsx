@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
   description: "Responda automaticamente, qualifique seus clientes e transfira para o atendente certo — sem perder nenhuma conversa.",
   icons: {
-    icon: "/images/apexmind-logo-final.png",
-    apple: "/images/apexmind-logo-final.png",
-    shortcut: "/images/apexmind-logo-final.png",
+    icon: "/images/apexmind-logo-transparent.png",
+    apple: "/images/apexmind-logo-transparent.png",
+    shortcut: "/images/apexmind-logo-transparent.png",
   },
   openGraph: {
     title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
