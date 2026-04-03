@@ -65,7 +65,7 @@ export function PricingSection() {
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "40px", textAlign: "left" }}>
               {includes.map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "center", gap: "12px", background: "rgba(255,255,255,0.04)", borderRadius: "10px", padding: "12px 16px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                  <svg viewBox="0 0 20 20" fill="none" width="18" height="18" flexShrink={0}>
+                  <svg viewBox="0 0 20 20" fill="none" width="18" height="18" style={{ flexShrink: 0 }}>
                     <circle cx="10" cy="10" r="9" stroke="rgba(167,139,250,0.4)" strokeWidth="1" />
                     <path d="M6.5 10l2.5 2.5 4.5-5" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

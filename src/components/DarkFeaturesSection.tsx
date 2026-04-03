@@ -181,7 +181,7 @@ function MetricsMockup() {
                   <p style={{ fontSize: "9px", color: "rgba(255,255,255,0.6)", margin: "0 0 2px", fontWeight: 600 }}>···{a.num}</p>
                   <span style={{ fontSize: "7.5px", fontWeight: 700, color: a.color, background: `${a.color}1a`, borderRadius: "3px", padding: "1px 5px" }}>{a.status}</span>
                 </div>
-                <div style={{ fontSize: "8px", color: a.color === "#25D366" ? "#25D366" : "#f59e0b", background: a.color === "#25D366" ? "rgba(37,211,102,0.12)" : "rgba(245,158,11,0.12)", borderRadius: "4px", padding: "2px 6px", fontWeight: 600, fontSize: "7px" }}>
+                <div style={{ fontSize: "7px", color: a.color === "#25D366" ? "#25D366" : "#f59e0b", background: a.color === "#25D366" ? "rgba(37,211,102,0.12)" : "rgba(245,158,11,0.12)", borderRadius: "4px", padding: "2px 6px", fontWeight: 600 }}>
                   {a.color === "#25D366" ? "ASSUMIR" : "AGUARD."}
                 </div>
               </div>
