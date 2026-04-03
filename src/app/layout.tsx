@@ -10,10 +10,26 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://apexmindcorp.com"),
   title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
   description: "Responda automaticamente, qualifique seus clientes e transfira para o atendente certo — sem perder nenhuma conversa.",
   icons: {
-    icon: "/images/apexmind-logo.jpg",
+    icon: "/images/apexmind-logo-final.png",
+    apple: "/images/apexmind-logo-final.png",
+    shortcut: "/images/apexmind-logo-final.png",
+  },
+  openGraph: {
+    title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
+    description: "Responda automaticamente, qualifique seus clientes e transfira para o atendente certo — sem perder nenhuma conversa.",
+    url: "https://apexmindcorp.com",
+    siteName: "ApexMind",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
+    description: "Atendimento automático 24h no WhatsApp. Feito sob medida para o seu negócio.",
   },
 };
 
