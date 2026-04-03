@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { BotConversaLogo } from "@/components/icons";
+import { ApexMindLogo } from "@/components/icons";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,10 +33,10 @@ export function Navbar() {
           maxWidth: "calc(100vw - 32px)",
           height: "48px",
           borderRadius: scrolled ? "16px" : "40px",
-          backgroundColor: scrolled ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0)",
-          backdropFilter: scrolled ? "blur(10px)" : "blur(0px)",
-          WebkitBackdropFilter: scrolled ? "blur(10px)" : "blur(0px)",
-          border: scrolled ? "1px solid rgba(255,255,255,0.6)" : "1px solid rgba(117,115,114,0)",
+          backgroundColor: "rgba(255,255,255,0.88)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          border: "1px solid rgba(0,0,0,0.07)",
           padding: "8px 8px 8px 24px",
           display: "flex",
           alignItems: "center",
@@ -45,13 +45,18 @@ export function Navbar() {
           pointerEvents: "auto",
         }}
       >
-        <BotConversaLogo />
+        <ApexMindLogo />
 
         <div className="hidden md:flex items-center">
-          {["Resources", "Prices", "Testimonials", "Frequently Asked Questions"].map((label) => (
+          {[
+            { label: "Como Funciona", href: "#como-funciona" },
+            { label: "Diferenciais", href: "#diferenciais" },
+            { label: "Setores", href: "#setores" },
+            { label: "FAQ", href: "#faq" },
+          ].map(({ label, href }) => (
             <a
               key={label}
-              href="#"
+              href={href}
               style={{
                 color: "#212327",
                 fontSize: "14px",
@@ -70,27 +75,26 @@ export function Navbar() {
         </div>
 
         <a
-          href="#"
+          href="https://wa.me/18625761010"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: "inline-flex",
             alignItems: "center",
             height: "32px",
             padding: "0 20px",
             fontSize: "14px",
-            fontWeight: 500,
-            color: "#212327",
-            background: "transparent",
-            border: "1px solid rgba(0,0,0,0.12)",
+            fontWeight: 700,
+            color: "#fff",
+            background: "linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%)",
+            border: "none",
             borderRadius: "8px",
             textDecoration: "none",
             whiteSpace: "nowrap",
-            transition: "background 0.15s",
             flexShrink: 0,
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.04)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
         >
-          Log In
+          Fale Conosco
         </a>
       </div>
     </nav>

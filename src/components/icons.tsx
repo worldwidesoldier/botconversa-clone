@@ -1,44 +1,33 @@
 import { cn } from "@/lib/utils";
 
-// BotConversa Logo Mark (uses downloaded favicon as logo mark)
-export function BotConversaLogoMark({ className, width, height }: { className?: string; width?: number; height?: number }) {
+// ApexMind Logo Mark
+export function ApexMindLogoMark({ className, width, height }: { className?: string; width?: number; height?: number }) {
   return (
     <img
-      src="/images/logo-mark.png"
-      alt="BotConversa"
-      width={width ?? 28}
-      height={height ?? 28}
+      src="/images/apexmind-logo-final.png"
+      alt="ApexMind"
+      width={width ?? 32}
+      height={height ?? 32}
       className={cn("inline-block", className)}
+      style={{ objectFit: "contain" }}
     />
   );
 }
 
-// BotConversa full wordmark
-export function BotConversaLogo({ className }: { className?: string }) {
+// ApexMind full wordmark
+export function ApexMindLogo({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <BotConversaLogoMark />
-      <span style={{ fontFamily: "var(--font-nunito-sans), 'Nunito Sans', sans-serif", fontWeight: 700, fontSize: "16px", color: "#18191c", letterSpacing: "-0.02em" }}>
-        botconversa
+      <ApexMindLogoMark />
+      <span style={{ fontFamily: "var(--font-nunito-sans), 'Nunito Sans', sans-serif", fontWeight: 800, fontSize: "17px", background: "linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: "-0.02em" }}>
+        ApexMind
       </span>
     </div>
   );
 }
 
-// Meta logo icon (for Meta Business Partner badge)
-export function MetaIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={cn("w-5 h-5", className)}>
-      <path d="M6 22.5C6 17.5 9.5 14 13 14C16.5 14 18.5 16.5 21 20.5L24 25.5L27 20.5C29.5 16.5 31.5 14 35 14C38.5 14 42 17.5 42 22.5C42 27.5 38.5 32 35 32C33 32 31 31 28.5 28.5L24 24L19.5 28.5C17 31 15 32 13 32C9.5 32 6 27.5 6 22.5Z" fill="url(#meta-gradient)" />
-      <defs>
-        <linearGradient id="meta-gradient" x1="6" y1="14" x2="42" y2="32" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0064E0" />
-          <stop offset="1" stopColor="#0081FF" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
+// Keep BotConversaLogo as alias for backward compat
+export const BotConversaLogo = ApexMindLogo;
 
 // WhatsApp icon
 export function WhatsAppIcon({ className, width, height }: { className?: string; width?: number; height?: number }) {

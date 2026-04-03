@@ -1,13 +1,17 @@
-import Image from "next/image";
-
-const imageLogos = [
-  { src: "/images/logo-nuvio.png", alt: "Nuvio" },
-  { src: "/images/logo-klyra.png", alt: "Klyra" },
-  { src: "/images/logo-knot.png", alt: "Knot" },
-  { src: "/images/logo-veltix.png", alt: "Veltix" },
+const sectors = [
+  "Casas de Câmbio",
+  "Clínicas & Saúde",
+  "Imobiliárias",
+  "Restaurantes",
+  "E-commerce",
+  "Escritórios de Advocacia",
+  "Escolas & Cursos",
+  "Lojas de Varejo",
+  "Academias",
+  "Seguradoras",
+  "Consultórios",
+  "Financeiras",
 ];
-
-const textLogos = ["TUNIMED", "ADAPTA", "4COMPANY", "RESERVA"];
 
 function Track({ hidden }: { hidden?: boolean }) {
   return (
@@ -16,14 +20,19 @@ function Track({ hidden }: { hidden?: boolean }) {
       aria-hidden={hidden}
       style={{ display: "flex", alignItems: "center", gap: "48px", flexShrink: 0 }}
     >
-      {imageLogos.map((logo) => (
-        <div key={logo.alt} style={{ flexShrink: 0, opacity: 0.65 }}>
-          <Image src={logo.src} alt={logo.alt} width={120} height={32} style={{ height: "32px", width: "auto", objectFit: "contain" }} />
-        </div>
-      ))}
-      {textLogos.map((label) => (
-        <span key={label} style={{ flexShrink: 0, fontWeight: 700, fontSize: "18px", color: "#333", opacity: 0.65, whiteSpace: "nowrap" }}>
-          {label}
+      {sectors.map((name) => (
+        <span
+          key={name}
+          style={{
+            flexShrink: 0,
+            fontWeight: 600,
+            fontSize: "14px",
+            color: "rgba(255,255,255,0.45)",
+            whiteSpace: "nowrap",
+            letterSpacing: "0.02em",
+          }}
+        >
+          {name}
         </span>
       ))}
     </div>
@@ -32,16 +41,26 @@ function Track({ hidden }: { hidden?: boolean }) {
 
 export function LogoMarquee() {
   return (
-    <section style={{ backgroundColor: "#f7faff", padding: "48px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
-      <p style={{ fontSize: "14px", fontWeight: 500, color: "#6d6f74", textAlign: "center", padding: "0 24px" }}>
-        Over 45,000 companies are multiplying their results with BotConversa
+    <section
+      style={{
+        backgroundColor: "#0d1117",
+        borderTop: "1px solid rgba(255,255,255,0.05)",
+        padding: "40px 0",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "24px",
+      }}
+    >
+      <p style={{ fontSize: "13px", fontWeight: 500, color: "rgba(255,255,255,0.35)", textAlign: "center", padding: "0 24px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+        Atendemos empresas em todos os segmentos
       </p>
       <div
         style={{
           width: "100%",
           overflow: "hidden",
-          maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+          maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
         }}
       >
         <div style={{ display: "flex", width: "max-content" }}>

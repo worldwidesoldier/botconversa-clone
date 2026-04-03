@@ -10,10 +10,10 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BotConversa - Automate your WhatsApp conversations with AI assistants",
-  description: "Create in minutes. No programming needed. Scale your conversations without increasing your team.",
+  title: "ApexMind — Automatize seu WhatsApp com Assistentes de IA",
+  description: "Responda automaticamente, qualifique seus clientes e transfira para o atendente certo — sem perder nenhuma conversa.",
   icons: {
-    icon: "/seo/favicon.png",
+    icon: "/images/apexmind-logo.jpg",
   },
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunitoSans.variable}`}>
+    <html lang="pt-BR" className={`${nunitoSans.variable}`}>
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );

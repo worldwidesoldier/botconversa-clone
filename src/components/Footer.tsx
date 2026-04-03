@@ -1,86 +1,153 @@
-import { BotConversaLogo, WhatsAppIcon, FacebookIcon, InstagramIcon, YouTubeIcon, LinkedInIcon } from "@/components/icons";
+"use client";
 
-const sectionLinks = [
-  { label: "Resources", href: "#" },
-  { label: "Prices", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Frequently Asked Questions", href: "#faq" },
-];
+import { ApexMindLogo, WhatsAppIcon, InstagramIcon } from "@/components/icons";
 
 export function Footer() {
   return (
     <>
-      {/* CTA section */}
-      <section style={{ background: "#f7faff", padding: "80px 40px 0" }}>
-        <div style={{ background: "rgba(110,168,255,0.08)", borderRadius: "24px", padding: "80px 60px", textAlign: "center", position: "relative", overflow: "hidden", maxWidth: "1200px", margin: "0 auto" }}>
-          {/* Decorative left */}
-          <span aria-hidden style={{ position: "absolute", left: "-20px", top: "50%", transform: "translateY(-50%)", opacity: 0.12, pointerEvents: "none" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-mark.png" alt="" width={180} height={180} />
+      {/* CTA banner */}
+      <section style={{ background: "#f7faff", padding: "80px 32px 0" }}>
+        <div style={{
+          background: "linear-gradient(135deg, rgba(43,92,230,0.07) 0%, rgba(136,71,232,0.07) 100%)",
+          border: "1px solid rgba(136,71,232,0.14)",
+          borderRadius: "24px",
+          padding: "72px 48px",
+          textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
+          maxWidth: "1120px",
+          margin: "0 auto",
+        }}>
+          {/* Decorative marks */}
+          <span aria-hidden style={{ position: "absolute", left: "-24px", top: "50%", transform: "translateY(-50%)", opacity: 0.06, pointerEvents: "none" }}>
+            <img src="/images/apexmind-logo-final.png" alt="" width={180} height={180} style={{ objectFit: "contain" }} />
           </span>
-          {/* Decorative right */}
-          <span aria-hidden style={{ position: "absolute", right: "-20px", top: "50%", transform: "translateY(-50%)", opacity: 0.12, color: "#25D366", pointerEvents: "none" }}>
-            <WhatsAppIcon width={150} height={150} />
+          <span aria-hidden style={{ position: "absolute", right: "-16px", top: "50%", transform: "translateY(-50%)", opacity: 0.08, color: "#25D366", pointerEvents: "none" }}>
+            <WhatsAppIcon width={160} height={160} />
           </span>
 
-          <h2 style={{ fontSize: "clamp(32px,5vw,48px)", fontWeight: 700, color: "#18191c", textAlign: "center", maxWidth: "600px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-            Transform conversations into sales today
+          <h2 style={{ fontSize: "clamp(28px,4vw,46px)", fontWeight: 800, color: "#18191c", maxWidth: "580px", margin: "0 auto", position: "relative", zIndex: 1, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+            Transforme conversas em resultados ainda hoje
           </h2>
-          <p style={{ fontSize: "16px", color: "#6d6f74", textAlign: "center", maxWidth: "400px", margin: "8px auto 32px", position: "relative", zIndex: 1 }}>
-            Respond instantly, engage, and convert more customers starting today
+          <p style={{ fontSize: "16px", color: "#6d6f74", maxWidth: "380px", margin: "12px auto 36px", position: "relative", zIndex: 1, lineHeight: 1.6 }}>
+            Responda na hora, engaje seus clientes e converta mais — começando agora
           </p>
-          <a href="#" style={{ background: "linear-gradient(180deg, #6ea8ff 0%, #2b76e5 100%)", borderRadius: "8px", padding: "0 32px", height: "48px", fontSize: "14px", fontWeight: 700, letterSpacing: "0.08em", color: "#fff", textTransform: "uppercase", display: "inline-flex", alignItems: "center", textDecoration: "none", position: "relative", zIndex: 1 }}>
-            Start Now
+          <a
+            href="https://wa.me/18625761010"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: "linear-gradient(135deg,#2B5CE6,#8847E8)",
+              borderRadius: "10px",
+              padding: "0 32px",
+              height: "52px",
+              fontSize: "14px",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              color: "#fff",
+              textTransform: "uppercase",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              textDecoration: "none",
+              position: "relative",
+              zIndex: 1,
+              boxShadow: "0 8px 24px rgba(136,71,232,0.3)",
+            }}
+          >
+            <WhatsAppIcon width={17} height={17} />
+            Falar com a ApexMind
           </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer style={{ background: "#fff", padding: "48px 80px 32px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-        <div className="grid md:grid-cols-4 gap-10" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          {/* Col 1 */}
-          <div>
-            <BotConversaLogo />
-            <p style={{ fontSize: "13px", color: "#6d6f74", maxWidth: "220px", marginTop: "12px", lineHeight: 1.5 }}>
-              The largest conversational marketing platform for WhatsApp in Brazil
+      <footer style={{ background: "#fff", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "52px 80px 32px" }}>
+        <div
+          className="grid md:grid-cols-4 gap-10"
+          style={{ maxWidth: "1120px", margin: "0 auto" }}
+        >
+          {/* Brand */}
+          <div style={{ gridColumn: "span 1" }}>
+            <ApexMindLogo />
+            <p style={{ fontSize: "13px", color: "#6d6f74", maxWidth: "210px", marginTop: "12px", lineHeight: 1.6 }}>
+              Assistentes de IA para WhatsApp — feitos sob medida para o seu negócio.
             </p>
-            <div style={{ marginTop: "16px", display: "flex", gap: "16px", alignItems: "center" }}>
-              {[FacebookIcon, InstagramIcon, YouTubeIcon, LinkedInIcon].map((Icon, i) => (
-                <a key={i} href="#" style={{ color: "#6d6f74", display: "flex" }}><Icon width={18} height={18} /></a>
-              ))}
+            <div style={{ marginTop: "16px", display: "flex", gap: "14px", alignItems: "center" }}>
+              <a href="https://www.instagram.com/apexmindcorp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: "#6d6f74", display: "flex" }}><InstagramIcon width={18} height={18} /></a>
             </div>
           </div>
 
-          {/* Col 2 */}
+          {/* Navigation */}
           <div>
-            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#6d6f74", fontWeight: 600, marginBottom: "16px" }}>Seções</h3>
-            <nav>{sectionLinks.map((l) => <a key={l.href + l.label} href={l.href} style={{ fontSize: "14px", color: "#212327", display: "block", padding: "4px 0", textDecoration: "none" }}>{l.label}</a>)}</nav>
+            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Navegação</h3>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {[
+                { label: "Como Funciona", href: "#como-funciona" },
+                { label: "Diferenciais",  href: "#diferenciais" },
+                { label: "Setores",       href: "#setores" },
+                { label: "FAQ",           href: "#faq" },
+              ].map(l => (
+                <a key={l.href} href={l.href} style={{ fontSize: "14px", color: "#374151", textDecoration: "none", transition: "color 0.15s" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#8847E8")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </nav>
           </div>
 
-          {/* Col 3 */}
+          {/* Contact */}
           <div>
-            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#6d6f74", fontWeight: 600, marginBottom: "16px" }}>Seções</h3>
-            <nav>{sectionLinks.slice(0, 2).map((l) => <a key={l.label} href={l.href} style={{ fontSize: "14px", color: "#212327", display: "block", padding: "4px 0", textDecoration: "none" }}>{l.label}</a>)}</nav>
+            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Contato</h3>
+            <a
+              href="https://wa.me/18625761010"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#25D366", textDecoration: "none", fontWeight: 600 }}
+            >
+              <WhatsAppIcon width={15} height={15} />
+              WhatsApp
+            </a>
           </div>
 
-          {/* Col 4 */}
+          {/* Tag */}
           <div>
-            <p style={{ fontSize: "13px", color: "#6d6f74" }}>© 2024 BotConversa</p>
+            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Cobertura</h3>
+            <p style={{ fontSize: "13px", color: "#6d6f74", lineHeight: 1.6 }}>Atendemos empresas em todo o Brasil</p>
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "16px", marginTop: "40px", maxWidth: "1200px", margin: "40px auto 0" }}>
-          <p style={{ fontSize: "12px", color: "#6d6f74", textAlign: "center" }}>© 2024 BotConversa. All rights reserved.</p>
+        <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", marginTop: "40px", paddingTop: "20px", maxWidth: "1120px", margin: "40px auto 0" }}>
+          <p style={{ fontSize: "12px", color: "#9ca3af", textAlign: "center" }}>
+            © 2025 ApexMind. Todos os direitos reservados.
+          </p>
         </div>
       </footer>
 
       {/* Floating WhatsApp button */}
       <a
-        href="https://wa.me/551199999999"
+        href="https://wa.me/18625761010"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
-        style={{ position: "fixed", bottom: "24px", right: "24px", zIndex: 999, background: "#25D366", borderRadius: "50%", width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 16px rgba(37,211,102,0.4)", textDecoration: "none", color: "#fff" }}
+        aria-label="Falar no WhatsApp"
+        style={{
+          position: "fixed",
+          bottom: "24px",
+          right: "24px",
+          zIndex: 999,
+          background: "#25D366",
+          borderRadius: "50%",
+          width: "56px",
+          height: "56px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 4px 20px rgba(37,211,102,0.45)",
+          textDecoration: "none",
+          color: "#fff",
+        }}
       >
         <WhatsAppIcon width={28} height={28} />
       </a>

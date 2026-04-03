@@ -39,7 +39,7 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
 
-  /* BotConversa custom colors */
+  /* ApexMind custom colors */
   --color-bc-page-bg: var(--bc-page-bg);
   --color-bc-dark-bg: var(--bc-dark-bg);
   --color-bc-blue: var(--bc-blue);
@@ -49,47 +49,48 @@
 }
 
 :root {
-  /* BotConversa design tokens */
+  /* ApexMind design tokens */
   --bc-page-bg: #f7faff;
   --bc-dark-bg: #18191c;
-  --bc-blue: #2b76e5;
-  --bc-blue-light: #6ea8ff;
+  --bc-blue: #2B5CE6;
+  --bc-blue-light: #6B8FFF;
+  --bc-purple: #8847E8;
   --bc-text-dark: #18191c;
   --bc-text-nav: #212327;
   --bc-text-muted: #6b7280;
   --bc-border: rgba(0, 0, 0, 0.08);
-  --bc-btn-gradient: linear-gradient(180deg, #6ea8ff 0%, #2b76e5 100%);
+  --bc-btn-gradient: linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%);
 
-  /* shadcn tokens mapped to BotConversa palette */
+  /* shadcn tokens mapped to ApexMind palette */
   --background: #f7faff;
   --foreground: #18191c;
   --card: #ffffff;
   --card-foreground: #18191c;
   --popover: #ffffff;
   --popover-foreground: #18191c;
-  --primary: #2b76e5;
+  --primary: #2B5CE6;
   --primary-foreground: #ffffff;
-  --secondary: #f0f4ff;
+  --secondary: #f0f0ff;
   --secondary-foreground: #18191c;
-  --muted: #f0f4ff;
+  --muted: #f0f0ff;
   --muted-foreground: #6b7280;
-  --accent: #e8f0ff;
+  --accent: #ece8ff;
   --accent-foreground: #18191c;
   --destructive: oklch(0.577 0.245 27.325);
   --border: rgba(0, 0, 0, 0.08);
   --input: rgba(0, 0, 0, 0.08);
-  --ring: #2b76e5;
+  --ring: #2B5CE6;
   --radius: 0.5rem;
 
   /* sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #18191c;
-  --sidebar-primary: #2b76e5;
+  --sidebar-primary: #2B5CE6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f0f4ff;
+  --sidebar-accent: #f0f0ff;
   --sidebar-accent-foreground: #18191c;
   --sidebar-border: rgba(0, 0, 0, 0.08);
-  --sidebar-ring: #2b76e5;
+  --sidebar-ring: #2B5CE6;
 }
 
 @layer base {
@@ -121,6 +122,28 @@
 .animate-marquee-reverse {
   animation: marquee-reverse 30s linear infinite;
 }
+
+/* Aurora blob animations */
+@keyframes aurora-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(60px, -40px) scale(1.08); }
+  66%  { transform: translate(-30px, 50px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-50px, 30px) scale(1.05); }
+  66%  { transform: translate(40px, -60px) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(30px, 40px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.aurora-blob-1 { animation: aurora-1 14s ease-in-out infinite; }
+.aurora-blob-2 { animation: aurora-2 18s ease-in-out infinite; }
+.aurora-blob-3 { animation: aurora-3 11s ease-in-out infinite; }
 
 /* Fade-in-up animation for scroll reveals */
 @keyframes fadeInUp {

@@ -4,28 +4,51 @@ import { useState } from "react";
 import { PlusIcon, MinusIcon } from "@/components/icons";
 
 const faqs = [
-  { q: "What is the difference between the Starter and PRO plans?", a: "The difference between them is simple: the Starter Plan has everything you need to start selling with WhatsApp automations—access to campaigns, broadcasting, multi-agent support (up to 5 people per number), unlimited conversation flow creation, campaigns, and much more. The PRO Plan includes everything in the Starter Plan, plus the Official API, AI that understands audio and text, integrator and Kanban CRM in the annual plan, GPT Assistant, and access to the GPT Specialist. The perfect plan for those who want to implement AI right from the start." },
-  { q: "Is there any support available in case of questions?", a: "Yes, our support team will be available via email and chat in the help center to assist you with any technical questions or content inquiries." },
-  { q: "How does payment work? Can I pay in installments?", a: "We accept payment via credit card and Pix. Installments can be made in up to 12 interest-free payments using a credit card." },
-  { q: "Is there a satisfaction guarantee?", a: "Yes. If you are not satisfied, you can request a full refund up to 7 days after purchasing the monthly plan or up to 30 days after purchasing the annual plan." },
-  { q: "Do you have an official Meta API?", a: "Yes, the BotConversa in the PRO plan has an official coexistence API (the most advanced and technological level of the official Meta API)." },
-  { q: "Do I have access to artificial intelligence within WhatsApp?", a: "Yes, by subscribing to the PRO Plan, you will have access to the 'GPT Assistant' block within BotConversa, where you can run OpenAI's AI on your WhatsApp." },
-  { q: "Can I guarantee the Kanban CRM in the Starter plan?", a: "Yes, the Kanban CRM works on any BotConversa plan. Whether with or without the official API." },
-  { q: "Can I secure the Integrator in the starter plan?", a: "Yes, the Integrator works seamlessly with any BotConversa plan." },
-  { q: "I want to obtain more than one license, how do I do that?", a: "Simply make more than one purchase using the same email" },
+  {
+    q: "Como funciona o processo de contratação?",
+    a: "É simples: fazemos uma reunião para entender o seu negócio — produtos, serviços, perguntas frequentes e o jeito que você atende. Com isso, configuramos o assistente ideal. Em poucos dias úteis, ele já está respondendo seus clientes."
+  },
+  {
+    q: "Preciso saber programar ou entender de tecnologia?",
+    a: "Não. A ApexMind cuida de toda a parte técnica. Você só precisa responder perguntas sobre o seu negócio. O resto é com a gente."
+  },
+  {
+    q: "Funciona com o meu número de WhatsApp atual?",
+    a: "Sim. Conectamos diretamente ao número que você já usa. Seus clientes não precisam mudar nada — o atendimento melhora de forma transparente para eles."
+  },
+  {
+    q: "Em quanto tempo o assistente fica pronto?",
+    a: "Geralmente entre 3 a 7 dias úteis após a reunião inicial, dependendo da complexidade do seu atendimento."
+  },
+  {
+    q: "O que acontece quando o cliente quer falar com um humano?",
+    a: "O assistente identifica o momento certo — quando o cliente está qualificado ou tem uma necessidade específica — e faz o handoff automaticamente para um atendente da sua equipe, com todo o contexto da conversa."
+  },
+  {
+    q: "Posso usar em mais de uma filial ou número?",
+    a: "Sim. Cada número de WhatsApp é uma contratação separada. Entre em contato pelo WhatsApp para conversarmos sobre pacotes com múltiplos números."
+  },
+  {
+    q: "Tenho acesso a algum painel para acompanhar as conversas?",
+    a: "Sim. Você tem acesso a um dashboard completo com histórico de conversas, métricas de desempenho do assistente e relatório de handoffs realizados."
+  },
+  {
+    q: "Como é feito o suporte após a configuração?",
+    a: "Nossa equipe acompanha o funcionamento do assistente continuamente, faz ajustes quando necessário e está disponível pelo WhatsApp para qualquer dúvida."
+  },
 ];
 
 export function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" style={{ background: "#f7faff", padding: "80px 24px" }}>
+    <section id="faq" style={{ background: "#f7faff", padding: "100px 32px" }}>
       <div style={{ textAlign: "center" }}>
-        <h2 style={{ fontSize: "40px", fontWeight: 700, color: "#18191c", textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
-          Any questions left?
+        <h2 style={{ fontSize: "40px", fontWeight: 800, color: "#18191c", textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+          Ficou alguma dúvida?
         </h2>
         <p style={{ fontSize: "16px", color: "#6d6f74", textAlign: "center", maxWidth: "500px", margin: "12px auto 0" }}>
-          Clear your main doubts and start harnessing the full power of the tool to sell more through WhatsApp.
+          Respondemos as perguntas mais comuns. Se a sua não estiver aqui, fale diretamente com a gente no WhatsApp.
         </p>
       </div>
 
@@ -41,7 +64,7 @@ export function FAQSection() {
               style={{ display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer" }}
             >
               <span style={{ fontSize: "16px", fontWeight: 600, color: "#18191c", flex: 1, paddingRight: "16px" }}>{item.q}</span>
-              <span style={{ color: "#18191c", flexShrink: 0 }}>
+              <span style={{ color: "#8847E8", flexShrink: 0 }}>
                 {open === i ? <MinusIcon /> : <PlusIcon />}
               </span>
             </div>
