@@ -62,67 +62,46 @@ export function Footer() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: "#fff", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "52px 80px 32px" }}>
-        <div
-          className="grid md:grid-cols-4 gap-10"
-          style={{ maxWidth: "1120px", margin: "0 auto" }}
-        >
-          {/* Brand */}
-          <div style={{ gridColumn: "span 1" }}>
-            <ApexMindLogo />
-            <p style={{ fontSize: "13px", color: "#6d6f74", maxWidth: "210px", marginTop: "12px", lineHeight: 1.6 }}>
-              Assistentes de IA para WhatsApp — feitos sob medida para o seu negócio.
-            </p>
-            <div style={{ marginTop: "16px", display: "flex", gap: "14px", alignItems: "center" }}>
-              <a href="https://www.instagram.com/apexmindcorp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: "#6d6f74", display: "flex" }}><InstagramIcon width={18} height={18} /></a>
+      <footer style={{ background: "#fff", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "32px 32px 20px" }}>
+        <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+          {/* Top row */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-6" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+            {/* Brand + tagline */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <ApexMindLogo />
+              <p style={{ fontSize: "12px", color: "#9ca3af", margin: 0 }}>Assistentes de IA para WhatsApp · Brasil</p>
             </div>
-          </div>
 
-          {/* Navigation */}
-          <div>
-            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Navegação</h3>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            {/* Nav links */}
+            <nav className="flex flex-wrap gap-x-6 gap-y-2">
               {[
                 { label: "Como Funciona", href: "#como-funciona" },
                 { label: "Diferenciais",  href: "#diferenciais" },
                 { label: "Setores",       href: "#setores" },
                 { label: "FAQ",           href: "#faq" },
               ].map(l => (
-                <a key={l.href} href={l.href} style={{ fontSize: "14px", color: "#374151", textDecoration: "none", transition: "color 0.15s" }}
+                <a key={l.href} href={l.href} style={{ fontSize: "13px", color: "#6d6f74", textDecoration: "none" }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#8847E8")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
-                >
-                  {l.label}
-                </a>
+                  onMouseLeave={e => (e.currentTarget.style.color = "#6d6f74")}
+                >{l.label}</a>
               ))}
             </nav>
+
+            {/* Social + CTA */}
+            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+              <a href="https://www.instagram.com/apexmindcorp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: "#9ca3af", display: "flex" }}><InstagramIcon width={17} height={17} /></a>
+              <a href="https://wa.me/18625761010" target="_blank" rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "#25D366", borderRadius: "8px", padding: "7px 14px", color: "#fff", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>
+                <WhatsAppIcon width={14} height={14} />
+                WhatsApp
+              </a>
+            </div>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Contato</h3>
-            <a
-              href="https://wa.me/18625761010"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "#25D366", textDecoration: "none", fontWeight: 600 }}
-            >
-              <WhatsAppIcon width={15} height={15} />
-              WhatsApp
-            </a>
+          {/* Bottom row */}
+          <div style={{ paddingTop: "14px", display: "flex", justifyContent: "center" }}>
+            <p style={{ fontSize: "11px", color: "#c4c9d4", margin: 0 }}>© 2025 ApexMind. Todos os direitos reservados.</p>
           </div>
-
-          {/* Tag */}
-          <div>
-            <h3 style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af", fontWeight: 700, marginBottom: "16px" }}>Cobertura</h3>
-            <p style={{ fontSize: "13px", color: "#6d6f74", lineHeight: 1.6 }}>Atendemos empresas em todo o Brasil</p>
-          </div>
-        </div>
-
-        <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", marginTop: "40px", paddingTop: "20px", maxWidth: "1120px", margin: "40px auto 0" }}>
-          <p style={{ fontSize: "12px", color: "#9ca3af", textAlign: "center" }}>
-            © 2025 ApexMind. Todos os direitos reservados.
-          </p>
         </div>
       </footer>
 

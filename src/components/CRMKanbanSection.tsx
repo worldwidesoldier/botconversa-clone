@@ -91,9 +91,9 @@ export function CRMKanbanSection() {
         </div>
 
         {/* 3-step flow */}
-        <div style={{ background: "#fff", borderRadius: "20px", border: "1px solid rgba(0,0,0,0.07)", padding: "52px 48px", marginTop: "52px", boxShadow: "0 4px 32px rgba(0,0,0,0.05)" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0", justifyContent: "center", flexWrap: "wrap", rowGap: "32px" }}>
-
+        <div style={{ background: "#fff", borderRadius: "20px", border: "1px solid rgba(0,0,0,0.07)", padding: "40px 32px", marginTop: "48px", boxShadow: "0 4px 32px rgba(0,0,0,0.05)" }}>
+          {/* Desktop: horizontal row */}
+          <div className="hidden md:flex" style={{ alignItems: "center", justifyContent: "center" }}>
             {/* Step 1 */}
             <div style={{ textAlign: "center", minWidth: "140px" }}>
               <div style={{ width: "80px", height: "80px", borderRadius: "20px", background: "linear-gradient(135deg, rgba(43,92,230,0.08), rgba(136,71,232,0.08))", border: "1px solid rgba(136,71,232,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}>
@@ -102,54 +102,27 @@ export function CRMKanbanSection() {
               <p style={{ fontSize: "14px", fontWeight: 600, color: "#18191c", margin: "0 0 4px" }}>Seu número de WhatsApp</p>
               <p style={{ fontSize: "12px", color: "#9ca3af" }}>O mesmo que você já usa</p>
             </div>
-
-            {/* Arrow */}
-            <div style={{ padding: "0 20px", flexShrink: 0 }}>
+            {/* Arrow right */}
+            <div style={{ padding: "0 20px", flexShrink: 0, marginBottom: "28px" }}>
               <svg viewBox="0 0 32 16" width="32" height="16" fill="none">
-                <defs>
-                  <linearGradient id="arr-g" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#2B5CE6" /><stop offset="1" stopColor="#8847E8" />
-                  </linearGradient>
-                </defs>
-                <path d="M0 8h28M22 2l8 6-8 6" stroke="url(#arr-g)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <defs><linearGradient id="arr-g-d" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#2B5CE6"/><stop offset="1" stopColor="#8847E8"/></linearGradient></defs>
+                <path d="M0 8h28M22 2l8 6-8 6" stroke="url(#arr-g-d)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-
             {/* Step 2 */}
             <div style={{ textAlign: "center", minWidth: "140px" }}>
               <div style={{ width: "80px", height: "80px", borderRadius: "20px", background: "linear-gradient(135deg, rgba(43,92,230,0.08), rgba(136,71,232,0.08))", border: "1px solid rgba(136,71,232,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}>
-                <svg viewBox="0 0 100 100" width="40" height="40" fill="none">
-                  <defs>
-                    <linearGradient id="qr-g1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#2B5CE6" /><stop offset="1" stopColor="#8847E8" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="10" y="10" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7" />
-                  <rect x="16" y="16" width="20" height="20" rx="2" fill="white" />
-                  <rect x="20" y="20" width="12" height="12" rx="1" fill="url(#qr-g1)" />
-                  <rect x="58" y="10" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7" />
-                  <rect x="64" y="16" width="20" height="20" rx="2" fill="white" />
-                  <rect x="68" y="20" width="12" height="12" rx="1" fill="url(#qr-g1)" />
-                  <rect x="10" y="58" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7" />
-                  <rect x="16" y="64" width="20" height="20" rx="2" fill="white" />
-                  <rect x="20" y="68" width="12" height="12" rx="1" fill="url(#qr-g1)" />
-                  {[58,70,82].map(x => <rect key={x} x={x} y="58" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6" />)}
-                  {[58,82].map(x => <rect key={x} x={x} y="70" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6" />)}
-                  <rect x="58" y="82" width="20" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6" />
-                  <rect x="82" y="82" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6" />
-                </svg>
+                <svg viewBox="0 0 100 100" width="40" height="40" fill="none"><defs><linearGradient id="qr-g1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop stopColor="#2B5CE6"/><stop offset="1" stopColor="#8847E8"/></linearGradient></defs><rect x="10" y="10" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7"/><rect x="16" y="16" width="20" height="20" rx="2" fill="white"/><rect x="20" y="20" width="12" height="12" rx="1" fill="url(#qr-g1)"/><rect x="58" y="10" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7"/><rect x="64" y="16" width="20" height="20" rx="2" fill="white"/><rect x="68" y="20" width="12" height="12" rx="1" fill="url(#qr-g1)"/><rect x="10" y="58" width="32" height="32" rx="4" fill="url(#qr-g1)" opacity="0.7"/><rect x="16" y="64" width="20" height="20" rx="2" fill="white"/><rect x="20" y="68" width="12" height="12" rx="1" fill="url(#qr-g1)"/>{[58,70,82].map(x=><rect key={x} x={x} y="58" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6"/>)}{[58,82].map(x=><rect key={x} x={x} y="70" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6"/>)}<rect x="58" y="82" width="20" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6"/><rect x="82" y="82" width="8" height="8" rx="1" fill="url(#qr-g1)" opacity="0.6"/></svg>
               </div>
               <p style={{ fontSize: "14px", fontWeight: 600, color: "#18191c", margin: "0 0 4px" }}>Escaneia o QR Code</p>
               <p style={{ fontSize: "12px", color: "#9ca3af" }}>Como conectar um aparelho</p>
             </div>
-
-            {/* Arrow */}
-            <div style={{ padding: "0 20px", flexShrink: 0 }}>
+            {/* Arrow right */}
+            <div style={{ padding: "0 20px", flexShrink: 0, marginBottom: "28px" }}>
               <svg viewBox="0 0 32 16" width="32" height="16" fill="none">
-                <path d="M0 8h28M22 2l8 6-8 6" stroke="url(#arr-g)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M0 8h28M22 2l8 6-8 6" stroke="url(#arr-g-d)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-
             {/* Step 3 */}
             <div style={{ textAlign: "center", minWidth: "140px" }}>
               <div style={{ width: "80px", height: "80px", borderRadius: "20px", background: "linear-gradient(135deg, rgba(43,92,230,0.08), rgba(136,71,232,0.08))", border: "1px solid rgba(136,71,232,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}>
@@ -158,6 +131,33 @@ export function CRMKanbanSection() {
               <p style={{ fontSize: "14px", fontWeight: 600, color: "#18191c", margin: "0 0 4px" }}>Assistente online</p>
               <p style={{ fontSize: "12px", color: "#9ca3af" }}>Respondendo em segundos</p>
             </div>
+          </div>
+
+          {/* Mobile: vertical stack com setas para baixo */}
+          <div className="flex md:hidden flex-col items-center" style={{ gap: 0 }}>
+            {[
+              { icon: <IconPhone />, title: "Seu número de WhatsApp", sub: "O mesmo que você já usa" },
+              { icon: (
+                <svg viewBox="0 0 100 100" width="40" height="40" fill="none"><defs><linearGradient id="qr-g-m" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop stopColor="#2B5CE6"/><stop offset="1" stopColor="#8847E8"/></linearGradient></defs><rect x="10" y="10" width="32" height="32" rx="4" fill="url(#qr-g-m)" opacity="0.7"/><rect x="16" y="16" width="20" height="20" rx="2" fill="white"/><rect x="20" y="20" width="12" height="12" rx="1" fill="url(#qr-g-m)"/><rect x="58" y="10" width="32" height="32" rx="4" fill="url(#qr-g-m)" opacity="0.7"/><rect x="64" y="16" width="20" height="20" rx="2" fill="white"/><rect x="68" y="20" width="12" height="12" rx="1" fill="url(#qr-g-m)"/><rect x="10" y="58" width="32" height="32" rx="4" fill="url(#qr-g-m)" opacity="0.7"/><rect x="16" y="64" width="20" height="20" rx="2" fill="white"/><rect x="20" y="68" width="12" height="12" rx="1" fill="url(#qr-g-m)"/></svg>
+              ), title: "Escaneia o QR Code", sub: "Como conectar um aparelho" },
+              { icon: <IconCheck />, title: "Assistente online", sub: "Respondendo em segundos" },
+            ].map((step, i) => (
+              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+                <div style={{ textAlign: "center", padding: "20px 0 16px" }}>
+                  <div style={{ width: "72px", height: "72px", borderRadius: "18px", background: "linear-gradient(135deg, rgba(43,92,230,0.08), rgba(136,71,232,0.08))", border: "1px solid rgba(136,71,232,0.15)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
+                    {step.icon}
+                  </div>
+                  <p style={{ fontSize: "14px", fontWeight: 600, color: "#18191c", margin: "0 0 3px" }}>{step.title}</p>
+                  <p style={{ fontSize: "12px", color: "#9ca3af", margin: 0 }}>{step.sub}</p>
+                </div>
+                {i < 2 && (
+                  <svg viewBox="0 0 16 28" width="16" height="28" fill="none">
+                    <defs><linearGradient id={`arr-v-${i}`} x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse"><stop stopColor="#2B5CE6"/><stop offset="1" stopColor="#8847E8"/></linearGradient></defs>
+                    <path d={`M8 0v24M2 18l6 8 6-8`} stroke={`url(#arr-v-${i})`} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Info strip */}

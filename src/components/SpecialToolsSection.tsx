@@ -178,7 +178,7 @@ export function SpecialToolsSection() {
   const content = tabContent[active];
 
   return (
-    <section id="diferenciais" style={{ background: "#18191c", padding: "100px 0" }}>
+    <section id="diferenciais" className="py-14 md:py-[100px]" style={{ background: "#18191c" }}>
       <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 32px" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "56px" }}>

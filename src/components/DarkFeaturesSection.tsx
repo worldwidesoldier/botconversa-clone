@@ -266,7 +266,7 @@ const steps = [
 
 export function DarkFeaturesSection() {
   return (
-    <section id="como-funciona" style={{ backgroundColor: "#18191c", padding: "100px 0 120px", position: "relative", overflow: "hidden" }}>
+    <section id="como-funciona" className="pt-14 pb-16 md:pt-[100px] md:pb-[120px]" style={{ backgroundColor: "#18191c", position: "relative", overflow: "hidden" }}>
       {/* Top glow */}
       <div aria-hidden style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "280px", background: "radial-gradient(ellipse at 50% -10%, rgba(43,92,230,0.35) 0%, rgba(136,71,232,0.15) 50%, transparent 70%)", pointerEvents: "none" }} />
 
