@@ -31,7 +31,7 @@ export function Navbar() {
         style={{
           width: scrolled ? "640px" : "860px",
           maxWidth: "calc(100vw - 32px)",
-          height: "100px",
+          height: "72px",
           borderRadius: scrolled ? "16px" : "40px",
           backgroundColor: "rgba(255,255,255,0.88)",
           backdropFilter: "blur(14px)",
