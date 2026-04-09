@@ -20,9 +20,8 @@ export function ApexMindLogo({ className }: { className?: string }) {
     <img
       src="/images/apexmind-logo-new.png"
       alt="ApexMind"
-      height={36}
       className={cn("inline-block", className)}
-      style={{ objectFit: "contain" }}
+      style={{ height: "28px", width: "auto", objectFit: "contain" }}
     />
   );
 }
