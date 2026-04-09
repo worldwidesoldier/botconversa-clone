@@ -46,9 +46,9 @@ function ChatMockup() {
         </svg>
         {/* Avatar — ApexMind logo */}
         <div style={{ flexShrink: 0 }}>
-          <div style={{ width: "100px", height: "100px", borderRadius: "50%", overflow: "hidden", background: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: "46px", height: "46px", borderRadius: "50%", overflow: "hidden", background: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/apexmind-logo-new.png" alt="ApexMind" width={100} height={100} style={{ width: "130%", height: "130%", objectFit: "contain" }} />
+            <img src="/images/apexmind-logo-new.png" alt="ApexMind" width={46} height={46} style={{ width: "140%", height: "140%", objectFit: "contain" }} />
           </div>
         </div>
         {/* Name + status */}
