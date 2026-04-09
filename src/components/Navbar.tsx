@@ -29,15 +29,14 @@ export function Navbar() {
     >
       <div
         style={{
-          width: scrolled ? "640px" : "860px",
-          maxWidth: "calc(100vw - 32px)",
-          height: "52px",
+          width: scrolled ? "640px" : "900px",
+          maxWidth: "calc(100vw - 24px)",
           borderRadius: scrolled ? "16px" : "40px",
-          backgroundColor: "rgba(255,255,255,0.88)",
+          backgroundColor: "rgba(255,255,255,0.92)",
           backdropFilter: "blur(14px)",
           WebkitBackdropFilter: "blur(14px)",
           border: "1px solid rgba(0,0,0,0.07)",
-          padding: "0 10px 0 28px",
+          padding: "10px 12px 10px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -45,11 +44,13 @@ export function Navbar() {
           pointerEvents: "auto",
         }}
       >
+        {/* Logo — flex:1 left */}
         <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
           <ApexMindLogo />
         </div>
 
-        <div className="hidden md:flex items-center">
+        {/* Nav links — truly centered, hidden on mobile */}
+        <div className="hidden md:flex items-center gap-1">
           {[
             { label: "Como Funciona", href: "#como-funciona" },
             { label: "Diferenciais", href: "#diferenciais" },
@@ -63,12 +64,12 @@ export function Navbar() {
                 color: "#212327",
                 fontSize: "14px",
                 fontWeight: 500,
-                padding: "4px 12px",
+                padding: "6px 14px",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
                 transition: "opacity 0.15s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.6")}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.55")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
               {label}
@@ -76,29 +77,30 @@ export function Navbar() {
           ))}
         </div>
 
+        {/* CTA — flex:1 right */}
         <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-        <a
-          href="https://wa.me/18625761010"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            height: "32px",
-            padding: "0 20px",
-            fontSize: "14px",
-            fontWeight: 700,
-            color: "#fff",
-            background: "linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%)",
-            border: "none",
-            borderRadius: "8px",
-            textDecoration: "none",
-            whiteSpace: "nowrap",
-            flexShrink: 0,
-          }}
-        >
-          Fale Conosco
-        </a>
+          <a
+            href="https://wa.me/18625761010"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              height: "36px",
+              padding: "0 22px",
+              fontSize: "14px",
+              fontWeight: 700,
+              color: "#fff",
+              background: "linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%)",
+              border: "none",
+              borderRadius: "10px",
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+              flexShrink: 0,
+            }}
+          >
+            Fale Conosco
+          </a>
         </div>
       </div>
     </nav>
