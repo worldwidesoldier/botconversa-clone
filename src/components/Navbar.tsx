@@ -45,7 +45,9 @@ export function Navbar() {
           pointerEvents: "auto",
         }}
       >
-        <ApexMindLogo />
+        <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
+          <ApexMindLogo />
+        </div>
 
         <div className="hidden md:flex items-center">
           {[
@@ -74,6 +76,7 @@ export function Navbar() {
           ))}
         </div>
 
+        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
         <a
           href="https://wa.me/18625761010"
           target="_blank"
@@ -96,6 +99,7 @@ export function Navbar() {
         >
           Fale Conosco
         </a>
+        </div>
       </div>
     </nav>
   );
