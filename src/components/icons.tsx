@@ -20,7 +20,7 @@ export function ApexMindLogo({ className }: { className?: string }) {
     <img
       src="/images/apexmind-logo-new.png"
       alt="ApexMind"
-      className={cn("h-14 md:h-24 w-auto object-contain block flex-shrink-0", className)}
+      className={cn("h-20 md:h-32 w-auto object-contain block flex-shrink-0", className)}
     />
   );
 }
