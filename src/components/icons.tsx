@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export function ApexMindLogoMark({ className, width, height }: { className?: string; width?: number; height?: number }) {
   return (
     <img
-      src="/images/apexmind-logo-final.png"
+      src="/images/apexmind-logo-new.png"
       alt="ApexMind"
       width={width ?? 32}
       height={height ?? 32}
@@ -17,12 +17,13 @@ export function ApexMindLogoMark({ className, width, height }: { className?: str
 // ApexMind full wordmark
 export function ApexMindLogo({ className }: { className?: string }) {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
-      <ApexMindLogoMark />
-      <span style={{ fontFamily: "var(--font-nunito-sans), 'Nunito Sans', sans-serif", fontWeight: 800, fontSize: "17px", background: "linear-gradient(135deg, #2B5CE6 0%, #8847E8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: "-0.02em" }}>
-        ApexMind
-      </span>
-    </div>
+    <img
+      src="/images/apexmind-logo-new.png"
+      alt="ApexMind"
+      height={36}
+      className={cn("inline-block", className)}
+      style={{ objectFit: "contain" }}
+    />
   );
 }
 
