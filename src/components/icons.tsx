@@ -21,7 +21,7 @@ export function ApexMindLogo({ className }: { className?: string }) {
       src="/images/apexmind-logo-new.png"
       alt="ApexMind"
       className={cn("inline-block", className)}
-      style={{ height: "auto", width: "150px", maxWidth: "100%", objectFit: "contain", display: "block", flexShrink: 0 }}
+      style={{ height: "44px", width: "auto", objectFit: "contain", display: "block", flexShrink: 0 }}
     />
   );
 }

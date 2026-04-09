@@ -41,7 +41,6 @@ export function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          overflow: "hidden",
           transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
           pointerEvents: "auto",
         }}
