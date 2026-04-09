@@ -5,7 +5,7 @@ import { BrainConnections } from "@/components/BrainConnections";
 export function HeroSection() {
   return (
     <section
-      className="pt-[285px] md:pt-[240px]"
+      className="pt-[180px] md:pt-[220px]"
       style={{
         backgroundColor: "#0d1117",
         paddingBottom: "120px",
